@@ -17,7 +17,6 @@
     "include-media": "^1.4.9",
     "marked": "^0.7.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.12.0",
     "open-color": "^1.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -30,13 +29,14 @@
     "reactstrap": "^8.1.1",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
-    "redux-pender": "^2.0.12"
+    "redux-pender": "^2.0.12",
+    "sass": "^1.87.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "eject": "NODE_OPTIONS=--openssl-legacy-provider react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
