@@ -1,8 +1,8 @@
 import axios from 'axios';
-// import { API_BASE_URL } from '../constants';
+import { API_BASE_URL } from '../constants';
 import { Storage } from 'lib/storage';
 
-const API_BASE_URL = ''
+// const API_BASE_URL = ''
 
 export const getPost = (postId) => axios.get(`${API_BASE_URL}/api/posts/${postId}`);
 export const getPosts = ({ page, size }) => axios.get(`${API_BASE_URL}/api/posts?page=${page}&size=${size}`);
