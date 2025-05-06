@@ -64,7 +64,7 @@ spring:
   http:
     log-request-details: true
 server:
-  port: 8080
+  port: 4001
 logging:
   level:
     web: debug
