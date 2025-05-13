@@ -49,7 +49,7 @@ spring:
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
   security:
     oauth2:
       client:
