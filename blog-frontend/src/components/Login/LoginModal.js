@@ -6,6 +6,7 @@ import fbLogo from '../../images/fb-logo.png';
 import googleLogo from '../../images/google-logo.png';
 import styles from './LoginModal.scss';
 import classNames from 'classnames/bind';
+import { withRouter } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 class LoginModal extends Component {
@@ -23,13 +24,17 @@ class LoginModal extends Component {
     handleLogin(username, password, rememberMe);
   };
 
+  handleClose = () => {
+    this.props.history.push('/');
+  };
+
   render() {
-    const { loginError, handleClose, showModal } = this.props;
+    const { loginError, showModal } = this.props;
 
     return (
-      <Modal isOpen={showModal} toggle={handleClose} >
+      <Modal isOpen={showModal} toggle={this.handleClose} >
         <AvForm onSubmit={this.handleSubmit}>
-          <ModalHeader id="login-title" toggle={handleClose}>
+          <ModalHeader id="login-title" toggle={this.handleClose}>
             Sign in
           </ModalHeader>
           <ModalBody>
@@ -71,7 +76,7 @@ class LoginModal extends Component {
             </div>
           </ModalBody>
           <ModalFooter>
-            <Button color="secondary" onClick={handleClose} tabIndex="1">
+            <Button color="secondary" onClick={this.handleClose} tabIndex="1">
               Cancel
             </Button>{' '}
             <Button color="primary" type="submit">
@@ -99,4 +104,4 @@ class SocialLogin extends Component {
   }
 }
 
-export default LoginModal;
+export default withRouter(LoginModal);

@@ -77,6 +77,9 @@ class Register extends Component {
                   <Button color="primary" type="submit" block>
                     Register
                   </Button>
+                  <Button color="danger" type="cancel" block onClick={() => this.props.history.push("/")}>
+                    Cancel
+                  </Button>
                 </AvForm>
               </CardBody>
             </Card>

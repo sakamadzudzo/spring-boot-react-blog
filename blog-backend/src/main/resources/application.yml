@@ -68,3 +68,9 @@ server:
 logging:
   level:
     web: debug
+    com.zaxxer.hikari: off
+    javax.management.remote.rmi: off
+    root: debug
+    org.springframework: info
+    me.ktkim.blog: debug
+    org.slf4j: debug

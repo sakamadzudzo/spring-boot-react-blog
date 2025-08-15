@@ -57,6 +57,7 @@ public class AuthController {
             , @RequestParam(value = "rememberMe", defaultValue = "false", required = false) boolean rememberMe
             , HttpServletResponse response) throws AuthenticationException {
         log.debug("REST request to authenticate : {}", request.getEmail());
+        System.out.println("REST request to authenticate : " + request.getEmail());
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword());
 
